@@ -1,61 +1,125 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Gaza Madad Flow 🌍
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A Web Automation Model for Humanitarian Aid Registration in Gaza
 
-## About Laravel
+Gaza Madad Flow is an open-source Laravel-based system designed to **automate humanitarian aid registration** during crisis conditions such as the 2023 Gaza war.  
+The system allows citizens to **register once** and automatically sends their validated data to multiple aid platforms using n8n workflow automation — reducing manual work, data duplication, and access barriers.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🚨 Problem
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+After the 2023 war in Gaza, families faced:
+- Power outages and unstable internet access.
+- Repetitive and confusing registration processes across many aid links.
+- Fake and unsafe registration sites.
 
-## Learning Laravel
+This made it nearly impossible for vulnerable families to register for essential assistance.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🎯 Objectives
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Build a one-time registration system for all aid programs.
+- Automate data delivery to multiple humanitarian platforms.
+- Use web automation and integration tools that work even under weak connectivity.
+- Demonstrate how technology can make a difference in humanitarian crises.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## ⚙️ Tech Stack
 
-### Premium Partners
+| Category | Tools Used |
+|-----------|------------|
+| Backend | Laravel (PHP Framework) |
+| Database | PostgreSQL |
+| Automation | n8n (Cloud Workflow Automation) |
+| Data Sync | Google Sheets + API |
+| Hosting | Render |
+| Scheduler | UptimeRobot (Free Cron Alternative) |
+| Frontend | HTML, CSS, TailwindCSS, JavaScript |
+| Version Control | GitHub |
+| IDE | Visual Studio Code |
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## 🧩 Workflow Overview
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+The automation workflow performs:
 
-## Code of Conduct
+1. Read citizen data from Google Sheets.
+2. Extract HTML forms from multiple aid links.
+3. Normalize and map fields (name, ID, family, housing data, etc.).
+4. Submit forms automatically using authenticated HTTP requests.
+5. Log and update status for each processed record.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+> This workflow demonstrates multi-platform submission using `n8n`’s Google Sheets and HTTP Request nodes, supporting both Arabic and English aid sites.
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🧪 Features
 
-## License
+- ✅ One-time validated registration (no repeated entries)
+- 🔄 Automated data transfer to multiple platforms
+- 💾 Real-time synchronization with Google Sheets
+- ☁️ Deployed online using Render
+- 🕒 Hourly auto-sync via UptimeRobot
+- 🧱 Scalable for integration with official humanitarian systems
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 🚀 How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Maryam-Skaik/Gaza_Madad_FLow.git
+   cd Gaza_Madad_FLow
+2. Install dependencies:
+    ```bash
+    composer install
+    npm install
+3. Configure .env with your database and API keys.
+4. Run migrations:
+    ```bash
+    php artisan migrate
+5. Start the server:
+    ```bash
+    php artisan serve
+6. Import or rebuild the workflow inside your n8n Cloud or local instance if you wish to automate data flow.
+
+---
+
+## 📊 Results
+
+Testing showed:
+
+- 80% reduction in manual data entry time.
+- Seamless multi-platform submission even under weak connectivity.
+- Reliable synchronization and data integrity verified through Google Sheets logs.
+
+---
+
+## 🤝 Team
+
+- Maryam Refaa Skaik
+- Rania Raid Kashkask
+- Aya Nabil Alharazin
+- Misk Saad Ashour
+- Alaa Shareef Yousef
+
+Supervisor: Eng. Mohammed El-Agha
+Faculty of Information Technology – Islamic University of Gaza (2025)
+
+---
+
+## 📜 License
+
+Released under the MIT License — feel free to use, modify, and improve with credit.
+
+---
+
+## ❤️ Acknowledgment
+
+This project was developed during the ongoing crisis in Gaza, with the hope that technology can make a real difference in people’s lives.
+
+> “Technology can be a bridge to humanity when everything else falls apart.”
