@@ -72,7 +72,7 @@ The automation workflow performs:
 
 You can watch a **7-minute recorded demo** showing how Gaza Madad Flow works — from user registration to automated aid submission.
 
-👉 [Watch the demo video on Google Drive](https://drive.google.com/file/d/1QIFwIBWDE8j-5K6Kc-meXmhB0_rABhn9/view)
+👉 [Watch the demo video on Google Drive](https://drive.google.com/file/d/1ZreM2pKKVkd-3sbBusxV4m_aCDzeRyRs/view)
 
 ---
 
