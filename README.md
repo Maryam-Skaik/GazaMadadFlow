@@ -76,6 +76,16 @@ You can watch a **5-minute recorded demo** showing how Gaza Madad Flow works —
 
 ---
 
+## 📂 Documentation Resources
+
+The [`docs`](docs/) folder contains:
+- 📘 **Gaza Madad Flow.pdf** — the full graduation project documentation.
+- 🖼️ **workflow-diagram.png** — a visual of the n8n automation workflow.
+
+You can open or download them directly from the repository.
+
+---
+
 ## 🚀 How to Run
 
 1. Clone the repository:
