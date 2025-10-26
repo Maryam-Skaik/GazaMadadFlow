@@ -90,7 +90,7 @@ You can open or download them directly from the repository.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Maryam-Skaik/Gaza_Madad_FLow.git
+   git clone https://github.com/Maryam-Skaik/GazaMadadFLow
    cd Gaza_Madad_FLow
 2. Install dependencies:
     ```bash
